@@ -80,7 +80,7 @@ attacks$ratio <- attacks$`Far-right`/attacks$Other
 as.data.frame(table(terror$year, terror$Group)) -> plot.dta
 plot.dta <- plot.dta[plot.dta$Var1 == 2017, ]
 
-plot <- ggplot(data = plot.dta, aes(x = Var2, y = Freq, fill = Var2)) + 
+ggplot(data = plot.dta, aes(x = Var2, y = Freq, fill = Var2)) + 
   geom_bar(stat = "identity") + theme_minimal() + 
   scale_fill_manual(values=c("#FD0000", "#00A01E", "#004FFF")) + 
   ggtitle("U.S. Terror Attacks in 2017 by Perpetrator Group Category") + 
